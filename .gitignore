@@ -1,0 +1,24 @@
+# Dependencies
+/node_modules
+/jspm_packages
+
+# Testing
+/test/coverage
+/coverage
+
+# Production
+/build
+/dist
+/tmp
+
+# Environment
+.env
+.env.local
+
+# IDE/Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
