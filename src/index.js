@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { query, pool } from './db.js';
+import { creditWallet, debitWallet } from './controllers/adminController.js';
 
 dotenv.config();
 
@@ -12,16 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 // --- ADMIN APIs ---
-
-// Credit Wallet
-app.post('/admin/wallet/credit', async (req, res) => {
-    res.status(501).json({ message: 'Not implemented yet' });
-});
-
-// Debit Wallet
-app.post('/admin/wallet/debit', async (req, res) => {
-    res.status(501).json({ message: 'Not implemented yet' });
-});
+app.post('/admin/wallet/credit', creditWallet); // [cite: 14, 15]
+app.post('/admin/wallet/debit', debitWallet); // [cite: 19, 20]
 
 // --- CLIENT APIs ---
 
